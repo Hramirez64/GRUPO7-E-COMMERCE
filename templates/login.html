@@ -1,51 +1,40 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <body></body> 
+
     <!-- Outer Row -->
     <div class="row justify-content-center">
-        <div class="col-xl-8 col-lg-7 col-md-9"> 
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
   
           <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
               <!-- Nested Row within Card Body -->
-              <div class="p-5">
-                <div class="text-center">
-                  <h1 class="fontsize"><strong>libreria Inditex</strong></h1>
-                  <br>  
-                </div>
-                <div class="image">
-                <div class="row">
-                  <div class="col-lg-6 d-none d-lg-block ">
-                  <img src="https://yesofcorsa.com/wp-content/uploads/2017/02/4K-Books-Wallpaper-Download-Free.jpg" class="img-fluid" alt="Responsive image"  ></div>
+              <div class="row">
+                <div class="col-lg-6 d-none d-lg-block ">
+                  <img src="https://www.imagar.com/wp-content/uploads/2020/07/Desarrollo-web-ecommerce-1.jpg" class="img-fluid" alt="Responsive image" ></div>
                 <div class="col-lg-6">
                   <div class="p-5">
                     <div class="text-center">
-                      <h1 class="h4 text-gray-900 mb-4">Inicio de sesion</h1>
+                      <h1 class="h4 text-gray-900 mb-4">Bienvenido</h1>
                     </div>
-                
                     <!--Formulario de Login-->
                     <form class="user" action="/menu" method="GET">
-                      <div class="requad">
-                      <div class="row g-3">
-                        <div class="col-sm-20">
-                        <input type="email" class="form-control form-control-user" name="usuario" aria-describedby="emailHelp" placeholder="Ingrese el Usuario"> 
+                      <div class="form-group mb-3">
+                        <input type="email" class="form-control form-control-user" name="usuario" aria-describedby="emailHelp" placeholder="Ingrese el Usuario">
                       </div>
-                      <div class="col-sm-20">
+                      <div class="form-group mb-3">
                         <input type="password" class="form-control form-control-user" id="exampleInputPassword" name="passw" placeholder="Contraseña">
                       </div>
-                    </div>
-                  </div> 
-                                
+                                       
                       <div class="form-group mb-3">
                         <div class="custom-control custom-checkbox small">
                           <input type="checkbox" class="custom-control-input" id="customCheck">
-                          <label class="custom-control-label" for="customCheck">Recordar datos de acceso</label>
+                          <label class="custom-control-label" for="customCheck">Recordar</label>
                         </div>
                       </div>
-                      <div class="fontsize">
-                      <button class="btn btn-outline-danger" id="alertas" type="submit">Iniciar sesión</button>
-                    </div>
+                      <button class="btn btn-outline-primary btn-block" id="alertas" type="submit">Enviar</button>
+                    
                     
                       <!-- <a href="index.html" class="btn btn-primary btn-user btn-block">
                         Login
@@ -65,17 +54,9 @@
                     </div>
                     --> 
                     <hr>
-                    <div class="ajustar">
-                      <button type="button" class="btn btn-outline-primary"><a class="" href="{{url_for('registro')}}">Registrar usuario</a></button>
+                    <div class="text-center">
+                      <a class="btn btn-outline-primary" href="{{url_for('registro')}}">Registrar Usuario</a>
                     </div>
-                    
-                  
-
-                    <div class="posi">
-                      <button type="button" class="btn btn-outline-primary"><a class="y" href="{{url_for('registro')}}">¿olvidó su contraseña?</a></button>
-                     </div>
-                      
-                    
                    
                   </div>
                 </div>
@@ -88,6 +69,5 @@
       </div>
   
     </div>
-  
   
 {% endblock %}

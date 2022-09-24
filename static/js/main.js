@@ -15,7 +15,7 @@ function verdatos(){
         info=info+"<td>"+listapost[i]['userId'] + "</td>"
         info=info+"<td>"+listapost[i]['title'] + "</td>"
         info=info+"<td>"+listapost[i]['body'] + "</td>"
-        info=info+"<td> <span class='badge bg-success'>Editar</span> <span class='badge bg-danger'>Eliminar</span></td>"
+        info=info+"<td> <span class='badge rounded-pill bg-info'>Editar</span> <span class='badge bg-danger'>Eliminar</span></td>"
         info=info+"</tr>"
     
     }
@@ -26,6 +26,34 @@ function verdatos(){
     )
     
     }
+
+ 
+    function verdatosmaterias(){
+        var listapost;
+        var url="https://jsonplaceholder.typicode.com/posts"
+        
+        fetch(url)
+        .then(response=>response.json())
+        .then((data)=>{
+        listapost=data;    
+        var info=""
+        
+        for(var i=0;i<listapost.length;i++)
+        {
+            info=info+"<tr'>"
+            info=info+"<td>"+listapost[i]['id'] + "</td>"
+            info=info+"<td>"+listapost[i]['title'] + "</td>"
+            info=info+"<td> <span class='badge bg-success'>Editar</span> <span class='badge bg-danger'>Eliminar</span></td>"
+            info=info+"</tr>"
+        
+        }
+        
+     
+        document.getElementById("listado").innerHTML=info
+        }
+        )
+        
+        }
     
    
 function verproductos(){
@@ -42,9 +70,7 @@ var info=""
 var info=""
 info=info+"<div class='row d-flex justify-content-center '>"
 
-
-
-for(var i=0;i<10;i++)
+for(var i=0;i<20;i++)
 {
 info=info+"<div class='card p-0 m-1' style='width: 18rem;'>"
 info=info +"<img src='https://tienda.claro.com.co/wcsstore/Claro/images/catalog/equipos/646x1000/70040936.jpg' class='card-img-top' alt='...'>"    
@@ -52,10 +78,11 @@ info=info+"<div class='card-body'>"
 info=info+"<h5 class='card-title'></h5>"
 info=info+"<p class='card-text'></p>"
 info=info+"<ul class='list-group list-group-flush'>"
-info=info+"<li class='list-group-item'></li>"
-info=info+"<li class='list-group-item'></li>"
+info=info+"<li class='list-group-item'>Celular</li>"
+info=info+"<li class='list-group-item d-flex justify-content-between align-items-center'>Samsung Galaxy 11 <span class='badge bg-primary rounded-pill'>15</span></li>"
 info=info+"</ul>"
-info=info+"<a href='#' class='btn btn-primary'>Ver Perfil</a>"
+info=info+"<a href='/gestion' class='btn btn-primary mr-2'>Ver Producto</a>"
+info=info+"<a href='#' class='btn btn-danger'>Lista de Deseos</a>"
 info=info+"</div>"
 info=info+"</div>"
 }
@@ -68,6 +95,50 @@ document.getElementById("productos").innerHTML=info
 }
     );
 }    
+
+
+
+
+function listadeseos(){
+
+    var listapost;
+    var url="https://jsonplaceholder.typicode.com/posts"
+    
+    fetch(url)
+    .then(response=>response.json())
+    .then((data)=>{
+    listapost=data;    
+    var info=""    
+    
+    var info=""
+    info=info+"<div class='row d-flex justify-content-center '>"
+    
+    for(var i=0;i<5;i++)
+    {
+    info=info+"<div class='card p-0 m-1' style='width: 18rem;'>"
+    info=info +"<img src='https://tienda.claro.com.co/wcsstore/Claro/images/catalog/equipos/646x1000/70040936.jpg' class='card-img-top' alt='...'>"    
+    info=info+"<div class='card-body'>"
+    info=info+"<h5 class='card-title'></h5>"
+    info=info+"<p class='card-text'></p>"
+    info=info+"<ul class='list-group list-group-flush'>"
+    info=info+"<li class='list-group-item'>Celular</li>"
+    info=info+"<li class='list-group-item d-flex justify-content-between align-items-center'>Samsung Galaxy 11 <span class='badge bg-danger rounded-pill'>15</span></li>"
+    info=info+"</ul>"
+    info=info+"<a href='{{url_for('menu_gestion')}}' class='btn btn-danger'>Ver Producto</a>"
+    info=info+"</div>"
+    info=info+"</div>"
+    }
+    
+    info=info+"</div>"
+    info=info+"</div>"
+    
+    document.getElementById("productos").innerHTML=info
+        
+    }
+        );
+    }    
+
+
 
 class profesor {
     constructor(documento, nombre, apellido, rol) {
