@@ -1,49 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Libreria Inditex</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Usuarios</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Login</a>
-                  <a class="dropdown-item" href="#">Registro</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Categorias</a>
-                </div>
-              </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Lista de Desos</a>
-          </li>
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Genaralidades</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Contactanos</a>
-              <a class="dropdown-item" href="#">Sobre Nosotros</a>
-              <a class="dropdown-item" href="#">Privacidad</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Terminos</a>
-            </div>
-          </li>
+
+
+<nav>
+     <ul class="main">
+      <li><a href=""><span class="fa fa-users"></span>Usuarios</a>
+        <ul>
+          <li><a href=""><span class="fa fa-idcard"></span>Registro</a></li>
+
+          <li><a href=""><span class="fa fa-right-to-bracket"></span>Login</a></li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+      </li>  
+      <li><a href=""><span class="fa fa-book"></span>Libros</a>
+        <ul>
+          <li><a href=""><span class="fa fa-list"></span>Consultar</a></li>
+          <li><a href=""></a><span class="fa fa-check"></span>Calificar</li>
+          <li><a href=""></a><span class="fa fa-list"></span>Comentar</li>
+        </ul>
+      </li>
+      <li><a href=""><span class="fa fa-list"></span>Lista de deseos</a>
+        <ul>
+          <li><a href="">Consultar</a></li>
+          <li><a href=""></a>Modificar</li>
+        </ul>
+      </li>
+      <li><a href=""><span class="fa fa-list"></span>Generalidades</a>
+        <ul>
+          <li><a href="">Contacto</a></li>
+          <li><a href=""></a>Nosotros</li>
+          <li><a href=""></a>Privacidad</li>
+          <li><a href=""></a>Terminos</li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
 
 <div class="offcanvas offcanvas-start fondo-oscuro" tabindex="-1" id="offcanvasExample"
     aria-labelledby="offcanvasExampleLabel">
@@ -99,7 +91,6 @@
             <a href="cursos.html" class="boton"><i class="bi bi-list-task"></i>Curso</a> 
         </div>
     -->  
-<!--este es otra modificacion  ajkhdkjahdjkahd -->
 
     </div>
 </div>
